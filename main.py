@@ -1,23 +1,26 @@
 y: int = 30
 x: int = 40
 
-def newlayer(y: int, x: int, fill: str = ""):
-    layer = []
-    for i in range(y):
-        row = []
-        for j in range(x):
-            row.append(fill)
-        layer.append(row)
-    return layer
+class layer:
+  
+    data = []
 
-def printlayer(layer, deliminator: str = "\n"):
-    string = ""
-    for y in range(len(layer)):
-        for x in range(len(layer[y])):
-            string += layer[y][x]
-        string += deliminator
+    def __init__(self, y: int, x: int, fill: str = ""):
+        newlayer = []
+        for i in range(y):
+            row = []
+            for j in range(x):
+                row.append(fill)
+            newlayer.append(row)
+        data = newlayer
 
-    print(layer)
+    def __str__(self, deliminator: str = "\n"):
+        string = ""
+        for y in range(len(self.data)):
+            for x in range(len(self.data[y])):
+                string += self.data[y][x]
+            string += deliminator
+        return string
 
-screen = newlayer(y, x, "#")
-printlayer(screen)
+screen = layer(y, x, "#")
+print(screen)
