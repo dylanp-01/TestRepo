@@ -12,7 +12,7 @@ class layer:
             for j in range(x):
                 row.append(fill)
             newlayer.append(row)
-        data = newlayer
+        self.data = newlayer
 
     def __str__(self, deliminator: str = "\n"):
         string = ""
