@@ -2,7 +2,7 @@ y: int = 30
 x: int = 40
 
 class layer:
-
+  
     data = []
 
     def __init__(self, y: int, x: int, fill: str = ""):
@@ -21,3 +21,6 @@ class layer:
                 string += self.data[y][x]
             string += deliminator
         return string
+
+screen = layer(y, x, "#")
+print(screen)
