@@ -22,5 +22,13 @@ class layer:
             string += deliminator
         return string
 
+  def changepixel(y: int, x: int, to: str):
+    data[y][x] = to
+
 screen = layer(y, x, "#")
+print(screen)
+
+screen.changepixel(3, 3, ".")
+print("changed 3, 3 to .")
+
 print(screen)
