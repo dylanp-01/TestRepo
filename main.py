@@ -16,4 +16,8 @@ def printlayer(layer, deliminator: str = "\n"):
         for x in range(len(layer[y])):
             string += layer[y][x]
         string += deliminator
+
     print(layer)
+
+screen = newlayer(y, x, "#")
+printlayer(screen)
